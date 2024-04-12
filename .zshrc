@@ -131,7 +131,6 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 # Add neovim path
-export PATH=$PATH:$HOME/nvim-linux64/bin
-
+export PATH=$HOME/nvim-linux64/bin:$PATH
 # Add lunarvim path
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH
