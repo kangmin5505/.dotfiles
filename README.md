@@ -62,9 +62,9 @@
   [alacritty default shortcut](https://alacritty.org/config-alacritty-bindings.html)
 - [neovim](https://neovim.io/)
   ```sh
-  curl -L -o ~/nvim-linux64.tar.gz https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-  tar -vzxf ~/nvim-linux64.tar.gz -C ~/
-  rm -r ~/nvim-linux64.tar.gz
+  curl -L -o nvim-linux64.tar.gz https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+  tar -vzxf nvim-linux64.tar.gz -C ~/.local/share/
+  rm -r nvim-linux64.tar.gz
   ```
 - [LunarVim](https://www.lunarvim.org/)
   ```sh

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # variables 
-export BASE_DIR="$HOME/dotfiles"
+export BASE_DIR="$HOME/.dotfiles"
 
 export ZSHRC_SOURCE="$BASE_DIR/.zshrc"
 export ZSHRC_TARGET="$HOME/.zshrc"
@@ -19,9 +19,8 @@ export TMUX_TARGET="$HOME/.tmux.conf"
 export OHMYZSH_SOURCE="$BASE_DIR/.p10k.zsh"
 export OHMYZSH_TARGET="$HOME/.p10k.zsh"
 
-export LVIM_SOURCE="$BASE_DIR/.config/lvim/config.lua"
-export LVIM_TARGET_DIR="$HOME/.config/lvim"
-export LVIM_TARGET="$LVIM_TARGET_DIR/config.lua"
+export LVIM_SOURCE="$BASE_DIR/.config/lvim"
+export LVIM_TARGET="$HOME/.config"
 
 # $1: Target $2: Source
 make_symbolic_link() {
@@ -40,5 +39,4 @@ make_symbolic_link $ALACRITTY_TARGET $ALACRITTY_SOURCE
 make_symbolic_link $TMUX_TARGET $TMUX_SOURCE
 make_symbolic_link $OHMYZSH_TARGET $OHMYZSH_SOURCE
 
-mkdir -p $LVIM_TARGET_DIR
 make_symbolic_link $LVIM_TARGET $LVIM_SOURCE
