@@ -48,6 +48,10 @@
   ```sh
   sudo apt install tmux -y
   ```
+- [tpm](https://github.com/tmux-plugins/tpm)
+  ```sh
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  ```
 - [alacritty](https://alacritty.org/index.html)
   ```sh
   sudo add-apt-repository ppa:aslatter/ppa
