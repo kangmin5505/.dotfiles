@@ -80,13 +80,12 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 install_plugin "zsh-users/zsh-autosuggestions"
 install_plugin "zsh-users/zsh-syntax-highlighting"
-install_plugin "jeffreytse/zsh-vi-mode"
 
 plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-  fzf
+ 	fzf
 	thefuck
 	tmux
 )
