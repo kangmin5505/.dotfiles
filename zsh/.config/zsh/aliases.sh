@@ -12,6 +12,9 @@ alias rm="rm -i"
 alias df="df -h" # human-readable sizes
 alias free="free -m" # show sizes in MB
 
+# copy and paste
+alias pbcopy="xsel --input --clipboard"
+alias pbpaste="xsel --output --clipboard"
 
 if [[ "$(uname)" == "Darwin" ]]; then
   alias find="fd"
