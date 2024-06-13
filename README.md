@@ -9,6 +9,14 @@
   ```sh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
+- stow
+  ```sh
+  sudo apt install stow -y
+  ```
+- [fzf](https://github.com/junegunn/fzf)
+  ```sh
+  sudo apt install fzf -y
+  ```
 - [thefuck](https://github.com/nvbn/thefuck)
   ```sh
   sudo apt install python3-dev python3-pip python3-setuptools -y
