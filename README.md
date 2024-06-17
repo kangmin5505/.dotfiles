@@ -13,6 +13,11 @@
   ```sh
   sudo apt install stow -y
   ```
+- [vim-plug](https://github.com/junegunn/vim-plug)
+  ```sh
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  ```
 - [fzf](https://github.com/junegunn/fzf)
   ```sh
   sudo apt install fzf -y
