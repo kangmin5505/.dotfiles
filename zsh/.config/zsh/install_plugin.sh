@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 install_plugin() {
 	local plugin_name=$(echo $1 | cut -d '/' -f2)

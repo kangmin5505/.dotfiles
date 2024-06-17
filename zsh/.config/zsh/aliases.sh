@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 alias rc="vim ~/.zshrc"
 alias s="source ~/.zshrc"
