@@ -2,6 +2,7 @@
 
 alias rc="vim ~/.zshrc"
 alias s="source ~/.zshrc"
+alias dotfiles="cd ~/.dotfiles"
 
 # confirm before overwriting something
 alias cp="cp -i"
