@@ -17,4 +17,6 @@ Plug 'tpope/vim-surround'
 " https://github.com/jiangmiao/auto-pairs
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'tpope/vim-commentary'
+
 call plug#end()
