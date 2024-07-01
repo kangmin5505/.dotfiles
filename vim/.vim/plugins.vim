@@ -9,4 +9,6 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
 
+Plug 'tpope/vim-commentary'
+
 call plug#end()
