@@ -89,7 +89,7 @@ italic = { family = "Hack Nerd Font", style = "Italic" }  # Inherits family from
 bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }  # Inherits family from normal, Default style: Bold Italic
 
 # Font size in points
-size = 16  # Default: 11.25
+size = 13  # Default: 11.25
 
 # Offset is extra space around each character
 offset = { x = 0, y = 0 }  # Default: x = 0, y = 0
@@ -263,18 +263,8 @@ alphabet = "jfkdls;ahgurieowpq"  # Default: "jfkdls;ahgurieowpq"
 bindings = [
     # { key = "Key", mods = "Modifiers", action = "Action" },
     # { key = "Key", mods = "Modifiers", chars = "Characters to send" },
-    { key = "U", mods = "Alt", action = "ScrollPageUp" },
-    { key = "D", mods = "Alt", action = "ScrollPageDown" },
-    { key = "T", mods = "Alt", action = "ScrollToTop" },
-    { key = "B", mods = "Alt", action = "ScrollToBottom" },
     { key = "V", mods = "Control|Shift", action = "Paste" },
     { key = "C", mods = "Control|Shift", action = "Copy" },
     { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
     { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
-
-    # MacOS
-    { key = "U", mods = "Command", action = "ScrollPageUp" },
-    { key = "D", mods = "Command", action = "ScrollPageDown" },
-    { key = "T", mods = "Command", action = "ScrollToTop" },
-    { key = "B", mods = "Command", action = "ScrollToBottom" },
 ]

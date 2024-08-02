@@ -2,6 +2,8 @@
 " VIM settings
 "===============================================================================
 set nocompatible    " not compatible with 'VI'
+syntax on
+filetype plugin on
 
 "__encoding__
 set fileencoding=utf-8
@@ -23,10 +25,11 @@ set csto=0              " cscopetagorder (0:db first, 1:tag first)
 
 "__search__
 set hlsearch            " highlight search result
+set incsearch
 
 "__ETC__
 set number
-set scrolloff=20        " Number of lines before bottom when scrolling vertically
+set scrolloff=25        " Number of lines before bottom when scrolling vertically
 set backspace=indent,eol,start  " backspace can delete anything
 set wildignore=*.o,*.obj,*.a,*.bak,*.exe,*~
 set formatoptions=cro   " c: Auto-wrap comments,
