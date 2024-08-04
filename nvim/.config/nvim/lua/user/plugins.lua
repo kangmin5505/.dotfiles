@@ -63,7 +63,15 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
+  use {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require('lspconfig').clangd.setup({
+        -- Disable installation through mason
+        mason = false,
+      })
+    end
+  } -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- LSP diagnostics and code actions

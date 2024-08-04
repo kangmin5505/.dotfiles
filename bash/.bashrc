@@ -146,7 +146,6 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
-source ~/.local/share/blesh/ble.sh
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
