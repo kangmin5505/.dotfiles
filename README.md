@@ -1,51 +1,18 @@
 # Prerequisites
-- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-  ```sh
-  sudo apt update -y
-  sudo apt install zsh -y
-  chsh -s $(which zsh)
-  ```
-- [Oh My ZSH](https://ohmyz.sh/)
-  ```sh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  ```
-- stow
-  ```sh
-  sudo apt install stow -y
-  ```
-- [vim-plug](https://github.com/junegunn/vim-plug)
-  ```sh
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  ```
+- [neovim](https://neovim.io/)
+- [stow](https://www.gnu.org/software/stow/manual/stow.html)
+- [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 - [fzf](https://github.com/junegunn/fzf)
-  ```sh
-  sudo apt install fzf -y
-  ```
-- [thefuck](https://github.com/nvbn/thefuck)
-  ```sh
-  sudo apt install python3-dev python3-pip python3-setuptools -y
-  pip3 install thefuck --user
-  sudo apt install thefuck -y
-  ```
 - [tmux](https://github.com/tmux/tmux)
-  ```sh
-  sudo apt install tmux -y
-  ```
 - [tpm](https://github.com/tmux-plugins/tpm)
-  ```sh
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  ```
 - [alacritty](https://alacritty.org/index.html)
-  ```sh
-  sudo add-apt-repository ppa:aslatter/ppa
-  sudo apt update -y
-  sudo apt install alacritty -y
-  ```
   [alacritty default shortcut](https://alacritty.org/config-alacritty-bindings.html)
-
+  
 ## Setup
 ```sh
 mv ~/.zshrc ~/.zshrc.bak
 stow */
 ```
+## Troubleshootings
+- [add linux_arm64 to clangd registry](https://github.com/mason-org/mason-registry/issues/5800#issuecomment-2156640019)
+- [issue](https://discussion.fedoraproject.org/t/alacritty-hack-nerd-font-mono-issues/79239/3)
