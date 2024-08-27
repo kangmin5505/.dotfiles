@@ -4,8 +4,12 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-vim.opt.timeoutlen = 250 -- or 500 (Default: 1000)
+require "user.plugins"
+require "user.options"
+require "user.keymaps"
+require "user.symbols-outline"
 
+-- TODO: create user.clangd
 require("lspconfig").clangd.setup {
   cmd = {
     "clangd",
@@ -134,19 +138,3 @@ vim.diagnostic.config({
   virtual_text = false;
 });
 
-local group = vim.api.nvim_create_augroup("jump_last_position", { clear = true })
-vim.api.nvim_create_autocmd(
-	"BufReadPost",
-	{callback = function()
-			local row, col = unpack(vim.api.nvim_buf_get_mark(0, "\""))
-			if {row, col} ~= {0, 0} then
-				vim.api.nvim_win_set_cursor(0, {row, 0})
-			end
-		end,
-	group = group
-	}
-)
-
--- Navigate buffers
-lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":bprevious<CR>"
