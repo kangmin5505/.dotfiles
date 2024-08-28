@@ -10,7 +10,6 @@
   
 ## Setup
 ```sh
-mv ~/.zshrc ~/.zshrc.bak
 stow */
 ```
 ## Troubleshootings
