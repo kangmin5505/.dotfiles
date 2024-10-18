@@ -148,8 +148,3 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-if command -v tmux &> /dev/null && [ -z "$TMUX" ];
-then
-  tmux
-fi

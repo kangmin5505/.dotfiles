@@ -37,5 +37,4 @@ vim.schedule(function()
 end)
 
 -- my plugins
-require("symbols-outline").setup()
 require("ibl").setup()

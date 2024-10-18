@@ -16,6 +16,9 @@ alias free="free -m" # show sizes in MB
 alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
 
+alias fd="fdfind"
+alias grep="grep --color=auto"
+
 if [[ "$(uname)" == "Darwin" ]]; then
   alias find="fd"
 fi

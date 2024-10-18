@@ -12,9 +12,6 @@ return {
       require "configs.lspconfig"
     end,
   },
-  {
-    "simrat39/symbols-outline.nvim",
-  },
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
