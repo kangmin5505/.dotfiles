@@ -3,3 +3,6 @@
 	name = kangmin
 [core]
 	editor = vim
+[i18n]
+	commitEncoding = utf-8
+	logOutputEncoding = utf-8

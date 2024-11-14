@@ -8,9 +8,6 @@ esac
 export BASH_CONFIG_DIR="$HOME/.config/bash"
 export OSH='/home/kangmin/.oh-my-bash'
 
-source "$BASH_CONFIG_DIR/aliases.sh"
-source "$BASH_CONFIG_DIR/exports.sh"
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="pure"
@@ -148,3 +145,8 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
+
+source "$BASH_CONFIG_DIR/aliases.sh"
+source "$BASH_CONFIG_DIR/exports.sh"
+
