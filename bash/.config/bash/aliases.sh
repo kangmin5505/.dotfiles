@@ -18,6 +18,7 @@ alias pbpaste="xsel --output --clipboard"
 
 alias fd="fdfind"
 alias grep="grep --color=auto"
+alias ip="ip -c=auto"
 
 if [[ "$(uname)" == "Darwin" ]]; then
   alias find="fd"
