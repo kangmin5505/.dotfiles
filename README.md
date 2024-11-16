@@ -15,3 +15,11 @@ stow */
 ## Troubleshootings
 - [add linux_arm64 to clangd registry](https://github.com/mason-org/mason-registry/issues/5800#issuecomment-2156640019)
 - [issue](https://discussion.fedoraproject.org/t/alacritty-hack-nerd-font-mono-issues/79239/3)
+
+
+## My Utilities
+- [bat](https://github.com/sharkdp/bat)
+- [eza](https://github.com/ogham/exa)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [fzf](https://github.com/junegunn/fzf)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file)
