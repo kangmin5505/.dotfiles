@@ -22,6 +22,7 @@ local options = {
   wildmode = "longest,list",
   autochdir = true,
   tabstop = 8,
+  modifiable = true,
 }
 
 vim.opt.shortmess:append "c"
