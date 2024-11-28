@@ -103,18 +103,42 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 
-source /home/ubuntu2404/.config/broot/launcher/bash/br
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ##### aliases #####
-alias rc="nvim $HOME/.zshrc"
-alias src="source $HOME/.zshrc"
-alias bat="batcat"
-alias dotfiles="cd ~/.dotfiles"
-
 # cubrid
 alias dev3="ssh kangmin@192.168.2.253"
 alias dev3c1="ssh cubrid@192.168.2.219"
 alias dev3c2="ssh cubrid@192.168.2.220"
 alias dev3c3="ssh cubrid@192.168.2.221"
+
+# git
+GIT_LOG_FORMAT="--graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+alias glog="git log $GIT_LOG_FORMAT"
+alias gloga="git log --all $GIT_LOG_FORMAT"
+alias gs="git status"
+
+# general
+alias rc="nvim $HOME/.zshrc"
+alias src="source $HOME/.zshrc"
+alias dotfiles="cd ~/.dotfiles"
+alias rm="rm -i"
+
+# lsd
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"
+
+###### export #####
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_COLLATE=C
+export LC_CTYPE=en_US.UTF-8
+#-------------------------------------------------------------------------------
+# set CUBRID environment variables
+#-------------------------------------------------------------------------------
+if [ -f $HOME/.cubrid.sh ];then
+  source $HOME/.cubrid.sh
+fi
