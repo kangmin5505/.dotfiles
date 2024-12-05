@@ -118,13 +118,6 @@ alias glog="git log $GIT_LOG_FORMAT"
 alias gloga="git log --all $GIT_LOG_FORMAT"
 alias gs="git status"
 
-# general
-alias rc="nvim $HOME/.zshrc"
-alias src="source $HOME/.zshrc"
-alias dotfiles="cd ~/.dotfiles"
-alias rm="rm -i"
-alias lzg="lazygit"
-
 # lsd
 alias ls="lsd"
 alias l="ls -l"
@@ -132,15 +125,28 @@ alias la="ls -a"
 alias lla="ls -la"
 alias lt="ls --tree"
 
+# general
+alias rc="nvim $HOME/.zshrc"
+alias src="source $HOME/.zshrc"
+alias rm="rm -i"
+alias fd="fdfind"
+alias bat="batcat"
+alias v="nvim"
+alias fzfp="fzf --preview 'batcat --color=always {}' --preview-window '~3'"
+alias lzg="lazygit"
+
 ###### export #####
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export LC_COLLATE=C
 export LC_CTYPE=en_US.UTF-8
-
+export PATH=$HOME/.local/bin:$PATH
 #-------------------------------------------------------------------------------
 # set CUBRID environment variables
 #-------------------------------------------------------------------------------
 if [ -f $HOME/.cubrid.sh ];then
   source $HOME/.cubrid.sh
 fi
+
+eval "$(zoxide init zsh)"
