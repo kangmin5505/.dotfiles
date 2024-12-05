@@ -123,6 +123,7 @@ alias rc="nvim $HOME/.zshrc"
 alias src="source $HOME/.zshrc"
 alias dotfiles="cd ~/.dotfiles"
 alias rm="rm -i"
+alias lzg="lazygit"
 
 # lsd
 alias ls="lsd"
@@ -136,6 +137,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_COLLATE=C
 export LC_CTYPE=en_US.UTF-8
+
 #-------------------------------------------------------------------------------
 # set CUBRID environment variables
 #-------------------------------------------------------------------------------
