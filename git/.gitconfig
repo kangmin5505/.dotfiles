@@ -3,6 +3,13 @@
 	name = kangmin
 [core]
 	editor = vim
+	pager = delta
 [i18n]
 	commitEncoding = utf-8
 	logOutputEncoding = utf-8
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+[merge]
+	conflictStyle = diff3
