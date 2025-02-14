@@ -134,6 +134,7 @@ alias bat="batcat"
 alias v="nvim"
 alias fzfp="fzf --preview 'batcat --color=always {}' --preview-window '~3'"
 alias lzg="lazygit"
+alias dotfiles="cd $HOME/.dotfiles"
 
 ###### export #####
 export LANG=en_US.UTF-8
