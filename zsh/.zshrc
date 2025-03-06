@@ -130,10 +130,10 @@ alias lt="ls --tree"
 alias rc="nvim $HOME/.zshrc"
 alias src="source $HOME/.zshrc"
 alias rm="rm -i"
-if [ ! -x /usr/bin/fd ]; then
+if [ -x /usr/bin/fd ]; then
   alias fd="fdfind"
 fi
-if [ ! -x /usr/bin/bat ]; then
+if [ -x /usr/bin/bat ]; then
 alias bat="batcat"
 fi
 alias v="nvim"
@@ -159,7 +159,9 @@ eval "$(zoxide init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
-eval "$(direnv hook zsh)"
+if [ -x $HOME/.local/bin/direnv ]; then
+  eval "$(direnv hook zsh)"
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
