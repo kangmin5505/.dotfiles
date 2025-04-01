@@ -74,6 +74,7 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+  zsh_codex
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,6 +105,14 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+###### export #####
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_COLLATE=C
+export LC_CTYPE=en_US.UTF-8
+export PATH=$HOME/.local/bin:$PATH
+export XDG_CONFIG_HOME=$HOME/.config
 
 ##### aliases #####
 # cubrid
@@ -134,20 +143,15 @@ if [ -x /usr/bin/fd ]; then
   alias fd="fdfind"
 fi
 if [ -x /usr/bin/bat ]; then
-alias bat="batcat"
+  alias bat="batcat"
 fi
 alias v="nvim"
 alias fzfp="fzf --preview 'batcat --color=always {}' --preview-window '~3'"
 alias lzg="lazygit"
 alias dotfiles="cd $HOME/.dotfiles"
 
-###### export #####
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LC_COLLATE=C
-export LC_CTYPE=en_US.UTF-8
-export PATH=$HOME/.local/bin:$PATH
+bindkey '^X' create_completion
+
 #-------------------------------------------------------------------------------
 # set CUBRID environment variables
 #-------------------------------------------------------------------------------

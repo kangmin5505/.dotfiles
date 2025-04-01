@@ -2,16 +2,11 @@
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 -- Please read that file to know all available options :( 
 
----@type ChadrcConfig
+---@class ChadrcConfig
 local M = {}
 
 M.base46 = {
-	theme = "ayu_dark",
-
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+	theme = "oxocarbon",
 }
 
 return M

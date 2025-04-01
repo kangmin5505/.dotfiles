@@ -69,7 +69,7 @@ italic = { family = "Hack Nerd Font", style = "Italic" }  # Inherits family from
 bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }  # Inherits family from normal, Default style: Bold Italic
 
 # Font size in points
-size = 13  # Default: 11.25
+size = 15  # Default: 11.25
 
 # Offset is extra space around each character
 offset = { x = 0, y = 0 }  # Default: x = 0, y = 0
@@ -247,6 +247,7 @@ bindings = [
     { key = "C", mods = "Control|Shift", action = "Copy" },
     { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
     { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "L", mods = "Control|Shift", chars = "\u000C" },
 ]
 
 [general]

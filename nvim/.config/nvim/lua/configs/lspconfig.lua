@@ -4,22 +4,57 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "clangd" }
+-- local servers = {
+--   html = {},
+--   cssls = {},
+--   clangd = {},
+--   lua_ls = {
+--     settings = {
+--       Lua = {
+--         diagnostics = {
+--           globals = { "vim" }
+--         }
+--       }
+--     }
+--   },
+-- }
+--
+local servers = {
+  "html",
+  "cssls",
+  "clangd",
+  "pyright",
+  "jdtls",
+  lua_ls = {
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { "vim" }
+        }
+      }
+    }
+  },
+}
+
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-  }
+-- Iterate over servers
+for lsp, config in pairs(servers) do
+  -- Check if it's a string (default config) or a table (custom settings)
+  if type(config) == "string" then
+    lspconfig[config].setup {
+      on_attach = nvlsp.on_attach,
+      on_init = nvlsp.on_init,
+      capabilities = nvlsp.capabilities,
+    }
+  else
+    lspconfig[lsp].setup(vim.tbl_deep_extend("force", {
+      on_attach = nvlsp.on_attach,
+      on_init = nvlsp.on_init,
+      capabilities = nvlsp.capabilities,
+    }, config))
+  end
 end
-
-vim.diagnostic.config({
-  virtual_text = false,
-})
-
 
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {

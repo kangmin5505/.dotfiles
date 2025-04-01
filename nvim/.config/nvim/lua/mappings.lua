@@ -1,29 +1,14 @@
 require "nvchad.mappings"
 
--- add yours here
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
-local opts = { noremap = true, silent = true }
-local keymap = vim.keymap.set
+local map = vim.keymap.set
 
-keymap("n", ";", ":", { desc = "CMD enter command mode" })
-keymap("i", "jk", "<ESC>", opts)
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
 
--- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
-
--- Visual Block --
--- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- move buffer right
-require("nvchad.tabufline").move_buf(1)
--- move buffer left
-require("nvchad.tabufline").move_buf(-1)
+-- Tmux Navigation Keymaps
+map("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Tmux Navigate Left" })
+map("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Tmux Navigate Down" })
+map("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Tmux Navigate Up" })
+map("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Tmux Navigate Right" })
+map("n", "<C-\\>", "<cmd>TmuxNavigatePrevious<CR>", { desc = "Tmux Navigate Previous" })

@@ -1,0 +1,6 @@
+[submodule "tmux/.config/tmux/plugins/tmux-sensible"]
+	path = tmux/.config/tmux/plugins/tmux-sensible
+	url = https://git::@github.com/tmux-plugins/tmux-sensible
+[submodule "tmux/.config/tmux/plugins/tmux-themepack"]
+	path = tmux/.config/tmux/plugins/tmux-themepack
+	url = https://git::@github.com/tmux-plugins/tmux-themepack
