@@ -23,3 +23,4 @@ stow */
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fzf](https://github.com/junegunn/fzf)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
