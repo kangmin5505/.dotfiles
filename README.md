@@ -1,8 +1,7 @@
 # Prerequisites
 - [neovim](https://neovim.io/)
 - [stow](https://www.gnu.org/software/stow/manual/stow.html)
-- [oh-my-bash](https://github.com/ohmybash/oh-my-bash)
-- [fzf](https://github.com/junegunn/fzf)
+- [oh-my-zsh](https://ohmyz.sh)
 - [tmux](https://github.com/tmux/tmux)
 - [tpm](https://github.com/tmux-plugins/tpm)
 - [alacritty](https://alacritty.org/index.html)
@@ -19,7 +18,6 @@ stow */
 
 ## My Utilities
 - [bat](https://github.com/sharkdp/bat)
-- [eza](https://github.com/ogham/exa)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fzf](https://github.com/junegunn/fzf)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file)
