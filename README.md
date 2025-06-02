@@ -2,6 +2,8 @@
 - [neovim](https://neovim.io/)
 - [stow](https://www.gnu.org/software/stow/manual/stow.html)
 - [oh-my-zsh](https://ohmyz.sh)
+  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 - [tmux](https://github.com/tmux/tmux)
 - [tpm](https://github.com/tmux-plugins/tpm)
 - [alacritty](https://alacritty.org/index.html)
