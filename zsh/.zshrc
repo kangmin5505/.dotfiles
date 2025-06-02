@@ -74,7 +74,6 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-  zsh_codex
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -139,9 +138,6 @@ alias lt="ls --tree"
 alias rc="nvim $HOME/.zshrc"
 alias src="source $HOME/.zshrc"
 alias rm="rm -i"
-if [ -x /usr/bin/fd ]; then
-  alias fd="fdfind"
-fi
 if [ -x /usr/bin/bat ]; then
   alias bat="batcat"
 fi
@@ -149,8 +145,6 @@ alias v="nvim"
 alias fzfp="fzf --preview 'batcat --color=always {}' --preview-window '~3'"
 alias lzg="lazygit"
 alias dotfiles="cd $HOME/.dotfiles"
-
-bindkey '^X' create_completion
 
 #-------------------------------------------------------------------------------
 # set CUBRID environment variables

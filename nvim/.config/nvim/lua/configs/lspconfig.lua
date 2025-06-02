@@ -34,6 +34,14 @@ local servers = {
       }
     }
   },
+  rust_analyzer = {
+    settings = {
+      ["rust-analyzer"] = {
+        cargo = { allFeatures = true },
+        procMacro = { enable = true },
+      }
+    }
+  }
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"
