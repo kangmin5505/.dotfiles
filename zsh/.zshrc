@@ -145,6 +145,8 @@ alias v="nvim"
 alias fzfp="fzf --preview 'batcat --color=always {}' --preview-window '~3'"
 alias lzg="lazygit"
 alias dotfiles="cd $HOME/.dotfiles"
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 #-------------------------------------------------------------------------------
 # set CUBRID environment variables
