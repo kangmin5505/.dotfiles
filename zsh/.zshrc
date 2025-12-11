@@ -115,10 +115,10 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 ##### aliases #####
 # cubrid
-alias dev3="ssh kangmin@192.168.2.253"
-alias dev3c1="ssh cubrid@192.168.2.219"
-alias dev3c2="ssh cubrid@192.168.2.220"
-alias dev3c3="ssh cubrid@192.168.2.221"
+alias dev3="ssh -X kangmin@192.168.2.253"
+alias dev3c1="ssh -X cubrid@192.168.2.219"
+alias dev3c2="ssh -X cubrid@192.168.2.220"
+alias dev3c3="ssh -X cubrid@192.168.2.221"
 alias runvpn="sudo $HOME/Scripts/run-vpn.sh"
 
 # git
@@ -147,6 +147,7 @@ alias lzg="lazygit"
 alias dotfiles="cd $HOME/.dotfiles"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias cd=z
 
 #-------------------------------------------------------------------------------
 # set CUBRID environment variables
