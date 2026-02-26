@@ -110,7 +110,7 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_COLLATE=C
 export LC_CTYPE=en_US.UTF-8
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/scripts:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 
 ##### aliases #####
@@ -148,6 +148,7 @@ alias dotfiles="cd $HOME/.dotfiles"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias cd=z
+alias ghco='gh copilot'
 
 #-------------------------------------------------------------------------------
 # set CUBRID environment variables
@@ -164,6 +165,14 @@ if [ -x $HOME/.local/bin/direnv ]; then
   eval "$(direnv hook zsh)"
 fi
 
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -d "$HOME/.cargo/bin" ] && [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# opencode
+export PATH=/home/cubrid/.opencode/bin:$PATH

@@ -11,7 +11,14 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
+	paging = always
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
 [init]
 	defaultBranch = main
+[diff]
+        tool = default-difftool
+[difftool "default-difftool"]
+        cmd = code --wait --diff $LOCAL $REMOTE
+[commit]
+	verbose = true
