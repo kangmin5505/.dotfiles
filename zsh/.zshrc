@@ -175,4 +175,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # opencode
-export PATH=/home/cubrid/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
+
+source $HOME/.config/broot/launcher/bash/br
