@@ -180,3 +180,5 @@ fi
 export PATH=$HOME/.opencode/bin:$PATH
 
 source $HOME/.config/broot/launcher/bash/br
+
+source /home/kangmin/.config/broot/launcher/bash/br
