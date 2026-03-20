@@ -22,3 +22,5 @@
         cmd = code --wait --diff $LOCAL $REMOTE
 [commit]
 	verbose = true
+[pager]
+	branch = false
