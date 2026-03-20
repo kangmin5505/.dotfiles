@@ -68,5 +68,10 @@
     "writing": {
       "model": "github-copilot/gemini-3-flash-preview"
     }
+  },
+  "tmux": {
+    "enabled": true,
+    "layout": "main-vertical",
+    "main_pane_size": 60
   }
 }
