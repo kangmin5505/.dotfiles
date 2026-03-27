@@ -158,7 +158,7 @@ vim.o.inccommand = "split"
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 999
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -870,14 +870,7 @@ require("lazy").setup({
 			signature = { enabled = true },
 		},
 	},
-	{
-		"vesper-black",
-		dir = vim.fn.stdpath("config") .. "/colors",
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("vesper-black")
-		end,
-	},
+	-- vesper-black colorscheme is loaded from ~/.config/nvim/colors/vesper-black.lua
 
 	-- Highlight todo, notes, etc in comments
 	{
@@ -1044,6 +1037,14 @@ require("lazy").setup({
 			lazy = "💤 ",
 		},
 	},
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.schedule(function()
+			vim.cmd.colorscheme("vesper-black")
+		end)
+	end,
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
