@@ -254,6 +254,52 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 	end,
 })
 
+-- [[ VSCode Neovim keybindings ]]
+if vim.g.vscode then
+  local vscode = require("vscode")
+  local map = function(lhs, cmd, desc)
+    vim.keymap.set("n", lhs, function() vscode.call(cmd) end, { desc = desc })
+  end
+
+  -- Navigation
+  map("]c", "workbench.action.editor.nextChange", "Next change")
+  map("[c", "workbench.action.editor.previousChange", "Prev change")
+  map("]C", "workbench.action.compareEditor.nextChange", "Next change (diff)")
+  map("[C", "workbench.action.compareEditor.previousChange", "Prev change (diff)")
+  map("]p", "editor.action.marker.next", "Next problem")
+  map("[p", "editor.action.marker.prev", "Prev problem")
+  map("H", "workbench.action.previousEditor", "Prev editor")
+  map("L", "workbench.action.nextEditor", "Next editor")
+
+  -- Go to / peek (gr* pattern matches neovim LSP defaults)
+  map("grd", "editor.action.revealDefinition", "Go to definition")
+  map("gpd", "editor.action.peekDefinition", "Peek definition")
+  map("gh", "editor.action.showDefinitionPreviewHover", "Hover definition")
+  map("gri", "editor.action.goToImplementation", "Go to implementation")
+  map("gpi", "editor.action.peekImplementation", "Peek implementation")
+  map("grt", "editor.action.goToTypeDefinition", "Go to type definition")
+  map("gpt", "editor.action.peekTypeDefinition", "Peek type definition")
+  map("grr", "editor.action.referenceSearch.trigger", "Find references")
+  map("gq", "editor.action.quickFix", "Quick fix")
+  map("gO", "workbench.action.gotoSymbol", "Document symbols")
+  map("gW", "workbench.action.showAllSymbols", "Workspace symbols")
+
+  -- Telescope equivalents
+  map("<leader>sf", "workbench.action.quickOpen", "Search files")
+  map("<leader>sg", "workbench.action.findInFiles", "Search by grep")
+  map("<leader>sd", "workbench.actions.view.problems", "Search diagnostics")
+  map("<leader>sk", "workbench.action.openGlobalKeybindings", "Search keymaps")
+  map("<leader>ss", "workbench.action.showCommands", "Search select")
+  map("<leader>sc", "workbench.action.showCommands", "Search commands")
+  map("<leader>s.", "workbench.action.openRecent", "Search recent files")
+  map("<leader><leader>", "workbench.action.showAllEditors", "Find buffers")
+  map("<leader>/", "actions.find", "Fuzzy find in buffer")
+  map("<leader>q", "workbench.actions.view.problems", "Problems list")
+  map("<leader>th", "editor.action.toggleInlayHints", "Toggle inlay hints")
+
+  return
+end
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -1047,46 +1093,5 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
--- VSCode Neovim keybindings
-if vim.g.vscode then
-  local vscode = require("vscode")
-  local map = function(lhs, cmd, desc)
-    vim.keymap.set("n", lhs, function() vscode.call(cmd) end, { desc = desc })
-  end
-
-  -- Navigation
-  map("]c", "workbench.action.editor.nextChange", "Next change")
-  map("[c", "workbench.action.editor.previousChange", "Prev change")
-  map("]C", "workbench.action.compareEditor.nextChange", "Next change (diff)")
-  map("[C", "workbench.action.compareEditor.previousChange", "Prev change (diff)")
-  map("]p", "editor.action.marker.next", "Next problem")
-  map("[p", "editor.action.marker.prev", "Prev problem")
-  map("H", "workbench.action.previousEditor", "Prev editor")
-  map("L", "workbench.action.nextEditor", "Next editor")
-
-  -- Go to / peek (gr* pattern matches neovim LSP defaults)
-  map("grd", "editor.action.revealDefinition", "Go to definition")
-  map("gpd", "editor.action.peekDefinition", "Peek definition")
-  map("gh", "editor.action.showDefinitionPreviewHover", "Hover definition")
-  map("gri", "editor.action.goToImplementation", "Go to implementation")
-  map("gpi", "editor.action.peekImplementation", "Peek implementation")
-  map("grt", "editor.action.goToTypeDefinition", "Go to type definition")
-  map("gpt", "editor.action.peekTypeDefinition", "Peek type definition")
-  map("grr", "editor.action.referenceSearch.trigger", "Find references")
-  map("gq", "editor.action.quickFix", "Quick fix")
-  map("gO", "workbench.action.gotoSymbol", "Document symbols")
-  map("gW", "workbench.action.showAllSymbols", "Workspace symbols")
-
-  -- Telescope equivalents
-  map("<leader>sf", "workbench.action.quickOpen", "Search files")
-  map("<leader>sg", "workbench.action.findInFiles", "Search by grep")
-  map("<leader>sd", "workbench.actions.view.problems", "Search diagnostics")
-  map("<leader>sk", "workbench.action.openGlobalKeybindings", "Search keymaps")
-  map("<leader>ss", "workbench.action.showCommands", "Search select")
-  map("<leader>sc", "workbench.action.showCommands", "Search commands")
-  map("<leader>s.", "workbench.action.openRecent", "Search recent files")
-  map("<leader><leader>", "workbench.action.showAllEditors", "Find buffers")
-  map("<leader>/", "actions.find", "Fuzzy find in buffer")
-  map("<leader>q", "workbench.actions.view.problems", "Problems list")
-  map("<leader>th", "editor.action.toggleInlayHints", "Toggle inlay hints")
-end
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et
