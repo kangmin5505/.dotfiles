@@ -14,7 +14,7 @@
       "variant": "high"
     },
     "librarian": {
-      "model": "opencode/minimax-m2.5"
+      "model": "github-copilot/claude-sonnet-4.6"
     },
     "explore": {
       "model": "github-copilot/grok-code-fast-1"

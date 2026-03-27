@@ -871,12 +871,11 @@ require("lazy").setup({
 		},
 	},
 	{
-		"zenbones-theme/zenbones.nvim",
-		dependencies = { "rktjmp/lush.nvim" },
+		"vesper-black",
+		dir = vim.fn.stdpath("config") .. "/colors",
 		priority = 1000,
 		config = function()
-			vim.o.background = "dark"
-			vim.cmd.colorscheme("zenbones")
+			vim.cmd.colorscheme("vesper-black")
 		end,
 	},
 
