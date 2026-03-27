@@ -1090,6 +1090,3 @@ if vim.g.vscode then
   map("<leader>q", "workbench.actions.view.problems", "Problems list")
   map("<leader>th", "editor.action.toggleInlayHints", "Toggle inlay hints")
 end
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
