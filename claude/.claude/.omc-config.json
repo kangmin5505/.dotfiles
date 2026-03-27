@@ -1,0 +1,15 @@
+{
+  "defaultExecutionMode": "ultrawork",
+  "configuredAt": "2026-03-26T05:07:19.232Z",
+  "team": {
+    "maxAgents": 5,
+    "defaultAgentType": "executor",
+    "monitorIntervalMs": 15000,
+    "shutdownTimeoutMs": 15000
+  },
+  "setupCompleted": "2026-03-26T14:24:35+09:00",
+  "setupVersion": "4.9.1",
+  "hud": {
+    "preset": "full"
+  }
+}
