@@ -157,8 +157,6 @@ if [ -f $HOME/.cubrid.sh ];then
   source $HOME/.cubrid.sh
 fi
 
-eval "$(zoxide init zsh)"
-
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 if [ -x $HOME/.local/bin/direnv ]; then
@@ -180,3 +178,5 @@ fi
 export PATH=$HOME/.opencode/bin:$PATH
 
 source $HOME/.config/broot/launcher/bash/br
+
+eval "$(zoxide init zsh)"
